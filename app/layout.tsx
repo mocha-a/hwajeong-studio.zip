@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from 'next/font/local';
-import "./styles/globals.scss";
+import Background from "../components/background/Background";
+import "../styles/globals.scss";
 
 const mona12 = localFont({
   src: './fonts/Mona12.woff2',
@@ -64,7 +65,10 @@ export default function RootLayout({
       ${pretendard_regular.variable}
       ${pretendard_sembold.variable}
       ${powerpuff.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Background />
+        {children}
+      </body>
     </html>
   );
 }

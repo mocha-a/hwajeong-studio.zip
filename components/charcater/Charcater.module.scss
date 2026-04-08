@@ -1,0 +1,30 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.lemon, .lime, .sky, .pinky, .purple{
+    position: absolute;
+    image-rendering: pixelated;
+    animation: float 1.2s steps(1) infinite;
+}
+
+// 크기 설정
+.lemon{ @include set-size(230px, auto);}
+.lime, .sky{ @include set-size(260px, auto);}
+.pinky, .purple{ @include set-size(200px, auto);}
+
+// 위치 및 방향
+.lemon  {--scaleX: 1; animation-delay: 0s;    top: 10%;   left: 15%;}
+.lime   {--scaleX: 1; animation-delay: 0.3s;  bottom: 5%; left: 17%;}
+.sky    {--scaleX: 1; animation-delay: 0.6s;  top: 35%;   left: 7%;}
+.pinky  {--scaleX: -1; animation-delay: 0.2s; top: 15%;   right: 15%;}
+.purple {--scaleX: -1; animation-delay: 0.5s; bottom: 5%; right: 20%;}
+
+
+// 둥실둥실 애니메이션
+@keyframes float {
+  0%   { transform: translateY(0)    scaleX(var(--scaleX, 1)); }
+  25%  { transform: translateY(-4px) scaleX(var(--scaleX, 1)); }
+  50%  { transform: translateY(0)    scaleX(var(--scaleX, 1)); }
+  75%  { transform: translateY(4px)  scaleX(var(--scaleX, 1)); }
+  100% { transform: translateY(0)    scaleX(var(--scaleX, 1)); }
+}

@@ -1,21 +1,5 @@
-@use './styles/mixins' as *;
-@use './styles/variables' as *;
-
-.home {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-  background: url('/images/bg/background.webp') no-repeat center/cover;
-}
-
-.corner_TL, .corner_BL, .corner_TR, .corner_BR{
-  @include set-size(300px, auto);
-  position: absolute;
-}
-.corner_TL{ top: 0; left: 0; }
-.corner_BL{ bottom: 0; left: 0; }
-.corner_TR{ top: 0; right: 0; }
-.corner_BR{ bottom: 0; right: 0; }
+@use '../styles/mixins' as *;
+@use '../styles/variables' as *;
 
 .star_bg{
   position: absolute;
