@@ -1,0 +1,40 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+*{box-sizing: border-box; padding:0; margin: 0; word-break: keep-all;} 
+html, body { overflow-x: hidden; }
+html{font-size: 16px; color: $black; scrollbar-width: none; /* Firefox */}
+body{ 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -ms-overflow-style: none; /* IE 10+ */
+    -webkit-tap-highlight-color: transparent;
+    margin: 0 auto; padding: 0;
+    min-height: 100vh;
+    font-family: $font-mona;
+}
+body::-webkit-scrollbar {display: none; /* Chrome, Safari, Opera */}
+h1,h2,h3,h4,h5,p,figure{margin: 0; padding: 0;}
+ol,ul,li{list-style: none; margin: 0; padding:0;}
+button{
+    border: 0; margin: 0; padding: 0; background-color: transparent; 
+    font-family: $font-mona;
+    color: $black;
+}
+img{border: 0; vertical-align: middle; @include img_layout; }
+a{text-decoration: none; color: $black;}
+input, textarea{
+    border:0;
+    font-family: $font-mona;
+    color: $black;
+    &:focus{ outline: none; }
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+::before,::after{margin:0; padding: 0; box-sizing: border-box;}
