@@ -21,12 +21,6 @@ const mona_blod = localFont({
   display: 'swap',
 });
 
-const pretendo = localFont({
-  src: './fonts/Pretendo.woff2',
-  variable: '--font-pretendo',
-  display: 'swap',
-});
-
 const powerpuff = localFont({
   src: './fonts/Powerpuff.woff2',
   variable: '--font-powerpuff',
@@ -61,7 +55,6 @@ export default function RootLayout({
       ${mona10x12.variable}
       ${mona_blod.variable}
       ${mona12.variable}
-      ${pretendo.variable}
       ${pretendard_regular.variable}
       ${pretendard_sembold.variable}
       ${powerpuff.variable}`}>

@@ -1,0 +1,26 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.btnBox {
+  width: 48.75rem;
+  height: 6.875rem;
+  
+  background: linear-gradient(to bottom, #fff 0%, #BDD574 80%);
+  border: 1.5px solid $black;
+  border-radius: 1.25rem;
+  box-shadow: 4px 4px 3px $black;
+
+  @include flex;
+  justify-content: center;
+
+  &:active {
+    transform: translateY(4px);
+    box-shadow:
+      inset 0 4px 6px rgba(0, 0, 0, 0.5),  // 안쪽 눌림
+      2px 2px 3px $black;
+  }
+
+  .btn {
+    font-size: 3.125rem;
+  }  
+}

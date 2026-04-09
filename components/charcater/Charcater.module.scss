@@ -2,9 +2,9 @@
 @use '../../styles/variables' as *;
 
 .lemon, .lime, .sky, .pinky, .purple{
-    position: absolute;
-    image-rendering: pixelated;
-    animation: float 1.2s steps(1) infinite;
+  position: absolute;
+  image-rendering: pixelated;
+  animation: float 1.2s steps(1) infinite;
 }
 
 // 크기 설정

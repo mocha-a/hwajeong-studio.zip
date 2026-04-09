@@ -2,9 +2,9 @@
 @use '../../styles/variables' as *;
 
 .corner_TL, .corner_BL, .corner_TR, .corner_BR {
-    @include set-size(350px, auto);
-    position: fixed;
-    z-index: 0;
+  @include set-size(350px, auto);
+  position: fixed;
+  z-index: -1;
 }
 
 .corner_TL { top: 0; left: 0; }

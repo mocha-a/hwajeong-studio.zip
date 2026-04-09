@@ -2,21 +2,22 @@
 @use '../../styles/variables' as *;
 
 .statusBar {
-    position: fixed;
-    top: 1rem; right: 1rem;
-    z-index: 999;
+  position: fixed;
+  top: 1rem; right: 1rem;
+  z-index: 999;
+  margin-right: 2.5rem;
 
-    @include flex;
-    gap: 1.5rem;
-    
-    font-family: $font-mona;
-    letter-spacing: 5%;
+  @include flex;
+  gap: 2rem;
+  
+  font-family: $font-mona;
+  letter-spacing: 5%;
 
-    font-size: 2rem;
-    color: $white;
-    
-    
-    .battery{
-        width: 3.75rem;
-    }
+  font-size: 2rem;
+  color: $white;
+  
+  
+  .battery{
+    width: 3.75rem;
+  }
 }
