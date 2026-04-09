@@ -2,11 +2,12 @@ import styles from "./MenuButton.module.scss";
 
 interface Props{
   btn: string;
+  onClick?: () => void;
 }
 
-const MenuButton = ({ btn }: Props) => {
+const MenuButton = ({ btn, onClick }: Props) => {
   return (
-    <div className={styles.btnBox}>
+    <div className={styles.btnBox} onClick={onClick}>
       <p className={styles.btn}>{btn}</p>
     </div>
   )

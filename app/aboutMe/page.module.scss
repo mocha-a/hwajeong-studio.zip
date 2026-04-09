@@ -1,0 +1,31 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.aboutMe {
+  width: 1400px;
+  max-width: 100%;
+  margin: 100px auto;
+
+  .profile{
+    @include set-size(280px, auto);
+    @include card-border;
+    box-shadow: 4px 4px 3px $black;
+  }
+
+  .info{
+    margin-top: 20px;
+    >h2{
+      font-size: 2rem;
+      font-family: var(--font-mona12);
+      margin: 1.5rem 0 0.75rem
+    }
+    >p{
+      margin: 0.75rem 0;
+
+      &::before{
+        content: "> ";
+        font-family: var(--font-mona10x12);
+      }
+    }
+  }
+}

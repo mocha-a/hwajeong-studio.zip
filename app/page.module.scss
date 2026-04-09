@@ -4,16 +4,14 @@
 .home{
   .section{ height: 100vh ;}
   .center{ 
-    @include flex;
-    justify-content: center;
+    @include flex(center); 
   }
   .star_bg{
     position: absolute;
     inset: 0;           // top, right, bottom, left를 모두 0으로 설정
     z-index: -1;
 
-    @include flex;
-    justify-content: center;
+    @include flex(center); 
 
     >img{
       @include set-size(1400px, auto);
@@ -26,13 +24,12 @@
     position: relative;
     z-index: 10;
     
-    @include flex;
-    justify-content: center;
+    @include flex(center); 
     flex-direction: column;
   }
 
   .title {
-    font-family: $font-mona_blod;
+    font-family: var(--font-mona10x12-bold);
     font-size: 7rem;
     color: #f8ff95;
     
@@ -43,7 +40,7 @@
   .subtitle {
     margin: 0.5rem 0 2.2rem;
 
-    font-family: $font-powerpuff;
+    font-family: var(--font-powerpuff);
     font-size: 5rem;
     color: #ff69b4;
 

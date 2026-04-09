@@ -9,13 +9,19 @@ const mona12 = localFont({
   display: 'swap',
 });
 
+const mona12_blod = localFont({
+  src: './fonts/Mona12-Bold.woff2',
+  variable: '--font-mona12-Bold',
+  display: 'swap',
+});
+
 const mona10x12 = localFont({
   src: './fonts/Mona10x12.woff2',
   variable: '--font-mona10x12',
   display: 'swap',
 });
 
-const mona_blod = localFont({
+const mona10x12_blod = localFont({
   src: './fonts/Mona10x12-Bold.woff2',
   variable: '--font-mona10x12-bold',
   display: 'swap',
@@ -27,18 +33,11 @@ const powerpuff = localFont({
   display: 'swap',
 });
 
-const pretendard_regular = localFont({
+const pretendard = localFont({
   src: './fonts/Pretendard-Regular.woff2',
-  variable: '--font-pretendard-regular',
+  variable: '--font-pretendard',
   display: 'swap',
 });
-
-const pretendard_sembold = localFont({
-  src: './fonts/Pretendard-SemiBold.woff2',
-  variable: '--font-pretendard-semibold',
-  display: 'swap',
-});
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -53,10 +52,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`
       ${mona10x12.variable}
-      ${mona_blod.variable}
+      ${mona10x12_blod.variable}
       ${mona12.variable}
-      ${pretendard_regular.variable}
-      ${pretendard_sembold.variable}
+      ${mona12_blod.variable}
+      ${pretendard.variable}
       ${powerpuff.variable}`}>
       <body>
         <Background />

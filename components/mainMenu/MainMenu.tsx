@@ -1,11 +1,16 @@
 import MenuButton from "../menuButton/MenuButton";
 import styles from "./MainMenu.module.scss";
 
-const MainMenu = () => {
+interface Props {
+  onAboutMe: () => void;
+  onProjects: () => void;
+}
+
+const MainMenu = ({ onAboutMe, onProjects }: Props) => {
   return (
     <div className={styles.mainMenu}>
-      <MenuButton btn={"about Me"} />
-      <MenuButton btn={"Projects"} />
+      <MenuButton btn={"about Me"} onClick={onAboutMe}/>
+      <MenuButton btn={"Projects"} onClick={onProjects}/>
     </div>
     
   )

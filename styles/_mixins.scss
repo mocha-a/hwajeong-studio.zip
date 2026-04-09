@@ -1,8 +1,15 @@
 @use './variables' as *;
 
+// 이미지
 @mixin set-size($w: auto, $h: auto) {
   width: $w;
   height: $h;
+}
+
+// boder
+@mixin card-border($radius: 1rem, $width: 0.09375rem){
+  border: $width solid $black;
+  border-radius: $radius;
 }
 
 // ...
@@ -29,9 +36,10 @@
 }
 
 // flex
-@mixin flex{
+@mixin flex($justify: flex-start, $align: center) {
   display: flex;
-  align-items: center;
+  justify-content: $justify;
+  align-items: $align;
 }
 
 @mixin footer_before{

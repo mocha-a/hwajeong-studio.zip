@@ -2,7 +2,7 @@
 @use '../../styles/variables' as *;
 
 .mainMenu{
-  @include flex;
+  @include flex();
   flex-direction: column;
   gap: 100px;
 }

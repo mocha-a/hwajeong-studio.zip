@@ -1,11 +1,18 @@
+"use client";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import styles from "./page.module.scss";
 
 import MouseScroll from "../components/mouseScroll/MouseScroll";
 import Charcater from "../components/charcater/Charcater";
 import MainMenu from "../components/mainMenu/MainMenu";
+import ProjectList from "../components/projectList/ProjectList";
 
 export default function Home() {
+  const [scene, setScene] = useState<"menu" | "projects">("menu");
+  const router = useRouter();
+
   return (
     <div className={styles.home}>
       <main>
@@ -28,9 +35,17 @@ export default function Home() {
 
         {/* 버튼 */}
         <section className={`${styles.section} ${styles.center}`}>
-          <MainMenu />
-        </section>
+          {scene === "menu" && ( 
+            <MainMenu 
+              onAboutMe={() => router.push("/aboutMe")}
+              onProjects={() => setScene("projects")}
+            />
+          )}
 
+          {scene === "projects" && (
+            <ProjectList onClose={() => setScene("menu")} />
+          )}
+        </section>
       </main>
     </div>
   );

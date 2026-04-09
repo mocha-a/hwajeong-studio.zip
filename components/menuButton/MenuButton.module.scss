@@ -2,16 +2,14 @@
 @use '../../styles/variables' as *;
 
 .btnBox {
-  width: 48.75rem;
-  height: 6.875rem;
+  width: 34.125rem;
+  height: 4.8125rem;
   
   background: linear-gradient(to bottom, #fff 0%, #BDD574 80%);
-  border: 1.5px solid $black;
-  border-radius: 1.25rem;
+  @include card-border;
   box-shadow: 4px 4px 3px $black;
 
-  @include flex;
-  justify-content: center;
+  @include flex(center); 
 
   &:active {
     transform: translateY(4px);
@@ -21,6 +19,6 @@
   }
 
   .btn {
-    font-size: 3.125rem;
+    font-size: 2.1875rem;
   }  
 }
