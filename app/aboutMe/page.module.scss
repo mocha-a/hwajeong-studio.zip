@@ -5,6 +5,7 @@
   width: 1400px;
   max-width: 100%;
   margin: 100px auto;
+  @include flex($justify: space-between);
 
   .profile{
     @include set-size(280px, auto);

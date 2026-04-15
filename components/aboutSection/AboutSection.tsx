@@ -3,7 +3,7 @@
 import styles from "./AboutSection.module.scss";
 import { ReactNode } from "react";
 
-interface Props {
+type Props = {
   title: string;
   children: ReactNode;
   width?: number | string;
