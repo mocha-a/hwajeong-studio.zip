@@ -2,7 +2,6 @@
 @use '../../styles/variables' as *;
 
 .aboutSection {
-  @include set-size($w: 30rem);
   @include card-border;
   box-shadow: 4px 4px 4px $black;
   
@@ -32,8 +31,7 @@
 
     .content {
       font-family: var(--font-pretendard);
-      padding: 40px 0;
-      font-size: 1.2rem;
+      padding: 2.5rem 0;
     }
   }
 }

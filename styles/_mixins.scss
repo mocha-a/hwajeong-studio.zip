@@ -1,6 +1,6 @@
 @use './variables' as *;
 
-// 이미지
+
 @mixin set-size($w: auto, $h: auto) {
   width: $w;
   height: $h;
@@ -10,6 +10,14 @@
 @mixin card-border($radius: 1rem, $width: 0.09375rem){
   border: $width solid $black;
   border-radius: $radius;
+}
+
+//
+@mixin pressed($depth: 4px) {
+  transform: translateY($depth);
+  box-shadow:
+    inset 0 $depth 6px rgba(0, 0, 0, 0.5),
+    2px 2px 3px $black;
 }
 
 // ...

@@ -1,9 +1,8 @@
-// components/RetroWindow/RetroWindow.jsx
 "use client";
 import styles from "./AboutSection.module.scss";
 import { ReactNode } from "react";
 
-type Props = {
+type Props ={
   title: string;
   children: ReactNode;
   width?: number | string;
@@ -11,9 +10,9 @@ type Props = {
 
 export default function AboutSection({ title, children }: Props) {
   return (
-    <div className={styles.aboutSection}>
+    <section className={styles.aboutSection}>
       <div className={styles.header}>
-        <div className={styles.title}>{title}</div>
+        <h3 className={styles.title}>[ {title} ]</h3>
       </div>
 
       <div className={styles.contentBox}>
@@ -21,6 +20,6 @@ export default function AboutSection({ title, children }: Props) {
           {children}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
