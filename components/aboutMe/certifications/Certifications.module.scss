@@ -1,0 +1,35 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.certifications{
+  li{
+    @include arrow-before;
+    @include paragraph-gap;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.item .name {
+  white-space: nowrap;
+}
+
+.item .dots {
+  flex: 1;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    #999 25%,
+    transparent 25%
+  );
+  background-size: 6px 1px;
+  margin: 0 8px;
+}
+
+.item .date {
+  white-space: nowrap;
+}

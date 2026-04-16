@@ -10,95 +10,12 @@
   .contents{
     @include flex($justify: space-between);
 
-    .profile{
-      @include set-size($w: 20rem);
-
-      .idCard{
-        .profileImage{
-          @include set-size(10rem, auto);
-          @include card-border;
-          box-shadow: 4px 4px 3px $black;
-        }
-      
-        .info{
-          margin-top: 20px;
-          >h2{
-            font-size: 1.8rem;
-            font-family: var(--font-mona12);
-            margin: 1.5rem 0 0.75rem
-          }
-          >p{
-            margin: 0.4rem 0; 
-      
-            &::before{
-              content: "> ";
-              font-family: var(--font-mona12);
-            }
-          }
-        }
-      }
-    }
-
     .records{
-      @include set-size($w: 28rem);
-      .certifications{
-
-      }
+      @include set-size($w: 35rem);
     }
 
     .extra{
-      @include set-size($w: 22rem);
-
-      .toolsGrid{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-      }
-
-      .toolItem{
-        position: relative;
-        @include set-size($w: 70px);
-        border-radius: 1rem;
-        box-shadow: 4px 4px 3px $black;
-        overflow: hidden;
-        cursor: pointer;
-
-        /* 어두운 배경 */
-        .overlay {
-          position: absolute;
-          inset: 0;
-          background: rgba(0, 0, 0, 0.6);
-
-          @include flex($justify: center);
-
-          opacity: 0;
-          transition: 0.25s;
-        }
-
-        /* 텍스트 */
-        .overlay span {
-          color: white;
-          font-size: 13px;
-          font-weight: bold;
-        }
-
-        &:hover .overlay{
-          opacity: 1;
-          text-align: center;
-          word-break: keep-all;
-        }
-        
-        &:hover{
-          @include pressed(2px);
-        }
-      }
-
-      .awards{
-
-      }
+      @include set-size($w: 26rem);
     }
   }
 }
-
-
-

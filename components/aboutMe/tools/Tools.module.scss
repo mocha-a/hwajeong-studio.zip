@@ -1,0 +1,46 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.toolsGrid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  .toolItem{
+    position: relative;
+    @include set-size($w: 70px);
+    border-radius: 1rem;
+    box-shadow: 4px 4px 3px $black;
+    overflow: hidden;
+    cursor: pointer;
+
+    /* 어두운 배경 */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+
+      @include flex($justify: center);
+
+      opacity: 0;
+      transition: 0.25s;
+    }
+
+    /* 텍스트 */
+    .overlay span {
+      color: white;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    &:hover .overlay{
+      opacity: 1;
+      text-align: center;
+      word-break: keep-all;
+    }
+    
+    &:hover{
+      @include pressed(2px);
+    }
+  }
+}

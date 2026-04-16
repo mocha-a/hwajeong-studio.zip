@@ -1,18 +1,18 @@
-@use '../../styles/mixins' as *;
-@use '../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
 
 .aboutSection {
   @include card-border;
   box-shadow: 4px 4px 4px $black;
-  
   background: rgba(255, 255, 255, 0.9);
+  
   display: flex;
   flex-direction: column;
   overflow: hidden;
 
   .header {
-    @include flex(center); 
-    height: 50px;
+    @include flex(center);
+    height: 2.2rem;
     padding: 0 8px;
     border-bottom: 1.5px solid $black;
     background: linear-gradient(to bottom, #fff 0%, #BDD574 80%);
@@ -26,12 +26,12 @@
   
   .contentBox{
     flex: 1;
-    @include flex(center); 
     overflow-y: auto;
 
     .content {
+      width: 100%;
       font-family: var(--font-pretendard);
-      padding: 2.5rem 0;
+      padding: 2.5rem;
     }
   }
 }

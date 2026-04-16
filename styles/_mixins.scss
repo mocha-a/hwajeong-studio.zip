@@ -1,15 +1,30 @@
 @use './variables' as *;
 
-
 @mixin set-size($w: auto, $h: auto) {
   width: $w;
   height: $h;
 }
 
+@mixin arrow-before {
+  &::before {
+    content: '>';
+    margin-right: 0.375rem;
+    font-family: var(--font-mona12);
+  }
+}
+
 // boder
-@mixin card-border($radius: 1rem, $width: 0.09375rem){
+@mixin card-border($radius: 0.75rem, $width: 0.09375rem){
   border: $width solid $black;
   border-radius: $radius;
+}
+
+@mixin title-content-gap($margin: 0.75rem) {
+  margin-bottom: $margin;
+}
+
+@mixin paragraph-gap($margin: 0.4rem) {
+  margin-bottom: $margin;
 }
 
 //

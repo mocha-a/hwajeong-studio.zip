@@ -1,0 +1,50 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.experience{
+  h4{
+    @include title-content-gap;
+    font-family: var(--font-mona12);
+  }
+
+  .school::before, .subtitle::before{
+    content:'> ';
+    font-family: var(--font-mona12);
+  }
+  .educationSection{
+    margin-bottom: 1.25rem;
+  }
+  .educationContent{
+    @include flex;
+    @include paragraph-gap;
+
+    .major{
+      color: $fontgray;
+      &::before{
+        content: ' • ';
+      }
+    }
+  }
+  
+  .training {
+    .item {
+      >p{
+        @include paragraph-gap;
+        @include arrow-before;
+      }
+
+      .date{
+        color: $fontgray;
+      }
+
+      .details {
+        @include paragraph-gap;
+
+        > li {
+          @include paragraph-gap;
+          @include arrow-before;
+        }
+      }
+    }
+  }
+}
